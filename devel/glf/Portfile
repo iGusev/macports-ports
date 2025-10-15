@@ -1,0 +1,41 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           golang 1.0
+
+go.setup            github.com/igusev/glf 0.2.8 v
+go.offline_build    no
+revision            0
+
+homepage            https://github.com/igusev/glf
+
+description         Fast CLI tool for instant fuzzy search across self-hosted GitLab projects
+
+long_description    GLF (GitLab Fuzzy Finder) is a lightning-fast CLI tool for instant \
+                    fuzzy search across self-hosted GitLab projects using local cache. \
+                    Features multi-token search, smart ranking, auto-sync on startup, \
+                    and cross-platform support.
+
+categories          devel
+installs_libs       no
+license             MIT
+maintainers         {gmail.com:gusevio @igusev} \
+                    openmaintainer
+
+checksums           rmd160  ce185bc61c56a237a7c837d8a57d5ed898c3853e \
+                    sha256  b3916d812b265eb51a2e56826718365b6936679c4addc7e6980d695259b6c554 \
+                    size    101022
+
+build.env-append    CGO_ENABLED=0
+build.args          -o ${worksrcpath}/${name} \
+                    -trimpath \
+                    -ldflags \" \
+                        -s \
+                        -w \
+                        -X main.version=${version} \
+                    \" \
+                    ./cmd/glf
+
+destroot {
+    xinstall -m 0755 ${worksrcpath}/${name} ${destroot}${prefix}/bin/
+}
