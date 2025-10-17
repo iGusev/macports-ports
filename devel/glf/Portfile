@@ -3,9 +3,12 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/igusev/glf 0.2.8 v
+go.setup            github.com/igusev/glf 0.2.9 v
 go.offline_build    no
 revision            0
+checksums           rmd160  5b7f6767f7666eea967e3f7b065b773a7b7f51c1 \
+                    sha256  025c74a52764b969ec810acdad9ac065d7a88268569244ecc1b3d8d69439a286 \
+                    size    125267
 
 homepage            https://github.com/igusev/glf
 
@@ -21,10 +24,6 @@ installs_libs       no
 license             MIT
 maintainers         {gmail.com:gusevio @igusev} \
                     openmaintainer
-
-checksums           rmd160  ce185bc61c56a237a7c837d8a57d5ed898c3853e \
-                    sha256  b3916d812b265eb51a2e56826718365b6936679c4addc7e6980d695259b6c554 \
-                    size    101022
 
 build.env-append    CGO_ENABLED=0
 build.args          -o ${worksrcpath}/${name} \
