@@ -3,13 +3,12 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/igusev/glf 0.2.9 v
+go.setup            github.com/igusev/glf 0.3.0 v
 go.offline_build    no
 revision            0
-checksums           rmd160  5b7f6767f7666eea967e3f7b065b773a7b7f51c1 \
-                    sha256  025c74a52764b969ec810acdad9ac065d7a88268569244ecc1b3d8d69439a286 \
-                    size    125267
-
+checksums           rmd160  f64892cb147490e9067d317a449d8963188c8c2a \
+                    sha256  34f373e3acd7751566f33a6164ee7215aad30fec49e0aa07a6e3d3beaf2e437f \
+                    size    125853
 homepage            https://github.com/igusev/glf
 
 description         Fast CLI tool for instant fuzzy search across self-hosted GitLab projects
