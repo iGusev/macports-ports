@@ -3,14 +3,12 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/igusev/glf 0.3.1 v
+go.setup            github.com/igusev/glf 0.3.2 v
 go.offline_build    no
 revision            0
-checksums           rmd160  eb22fb5e060a03156b5db08e00c2b0dcd8fecac5 \
-                    sha256  5da5ba5ca7b51483e8eadc9aa644462b6fe56386e386b79b9c40008861b8b483 \
-                    size    126370
-description         Fast CLI tool for instant fuzzy search across self-hosted GitLab projects
-
+checksums           rmd160  930273c19b348a8ac0edcc17504eeb72f9c1737f \
+                    sha256  24735402b06b989a8540a5872281f49cd7fd1b7cd1da680bed791442a09be409 \
+                    size    127801
 long_description    GLF (GitLab Fuzzy Finder) is a lightning-fast CLI tool for instant \
                     fuzzy search across self-hosted GitLab projects using local cache. \
                     Features multi-token search, smart ranking, auto-sync on startup, \
