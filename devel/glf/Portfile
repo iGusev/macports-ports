@@ -3,22 +3,12 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/igusev/glf 0.3.4 v
+go.setup            github.com/igusev/glf 0.3.5 v
 go.offline_build    no
 revision            0
-checksums           rmd160  207ee92b808614f980738a4b0358cfa60cd0af6b \
-                    sha256  cdaa47e84abed70519c3d248d8e9ec16344184caf76fc1251bedac7e6f7c9167 \
-                    size    130939
-build.env-append    CGO_ENABLED=0
-build.args          -o ${worksrcpath}/${name} \
-                    -trimpath \
-                    -ldflags \" \
-                        -s \
-                        -w \
-                        -X main.version=${version} \
-                    \" \
-                    ./cmd/glf
-
+checksums           rmd160  04683ece26515beb611a8e1f70fb155e8eaf1da8 \
+                    sha256  aa4f6684e6498d90bdf7da2302cb3ea990e2ab2fce3a22fb85831c1771beb1f2 \
+                    size    131851
 destroot {
     xinstall -m 0755 ${worksrcpath}/${name} ${destroot}${prefix}/bin/
 }
