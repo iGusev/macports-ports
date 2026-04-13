@@ -3,9 +3,9 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/igusev/glf 0.5.0 v
+go.setup            github.com/igusev/glf 0.6.0 v
 go.offline_build    no
 revision            0
-checksums           rmd160  6c1cb68a68079fa4f46caa892e3a6e7a043f5c08 \
-                    sha256  70a63ac357625c1a845418f2ce8c9ce049a4118f58128845d479de33a394bb52 \
-                    size    1297770
+checksums           rmd160  bf3008d2d18da6f67ddb6f0532720334ed7ff39e \
+                    sha256  d8ae019024313f4a55d1570ba80388b2ad253e89f5cfb8e339447c5fec5acdde \
+                    size    1299689
